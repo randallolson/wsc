@@ -272,9 +272,6 @@
 	<artifactId>maven-surefire-plugin</artifactId>
 	<version>2.22.2</version>
 	<configuration>
-    <systemPropertyVariables>
-      <javax.net.ssl.trustStore>${JAVA_HOME}/lib/security/cacerts</javax.net.ssl.trustStore>
-    </systemPropertyVariables>
 	  <forkMode>always</forkMode>
           <useManifestOnlyJar>false</useManifestOnlyJar>
 	</configuration>
