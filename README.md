@@ -10,7 +10,7 @@ To skip the gpg signing, run the following command
 
     mvn clean package -Dgpg.skip
 
-During packaging, there is a depndency security check that requires additional setup.  This dependency check can be skipped by running the following command
+During packaging, there is a dependency security check that requires additional setup.  This dependency check can be skipped by running the following command
 
     mvn clean package -Ddependency-check.skip=true
 
