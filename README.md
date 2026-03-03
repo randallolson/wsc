@@ -10,6 +10,18 @@ To skip the gpg signing, run the following command
 
     mvn clean package -Dgpg.skip
 
+During packaging, there is a depndency security check that requires additional setup.  This dependency check can be skipped by running the following command
+
+    mvn clean package -Ddependency-check.skip=true
+
+In order to build the WSC while including the dependency check, create an account with https://ossindex.sonatype.org and obtain an API token.  Add the following server entry to the .m2/settings.xml
+
+    <server>
+        <id>ossindex</id>
+        <username>[Enter the username for ossindex.sonatype.org]</username>
+        <password>[Enter the API token for ossindex.sonatype.org]</password>
+    </server>
+
 ## Generating Stubs From WSDLs
     java -jar target/force-wsc-66.0.0-uber.jar <inputwsdlfile> <outputjarfile>
 
